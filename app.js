@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 if(!process.env.NODE_ENV != 'production'){
     require('dotenv').config()
 }
@@ -24,7 +23,7 @@ const localStrategy = require('passport-local');
 const store = MongoStore.create({
     mongoUrl:dbUrl,
     crypto:{
-        secret:process.env.SECRET
+        secret:process.env.SECRET,
     },
     touchAfter: 24*3600
 })
@@ -94,6 +93,3 @@ app.use((err,req,res,next)=>{
 app.listen(port,(req,res)=>{
     console.log('app is listening');
 })
-=======
-// New line 
->>>>>>> 0dff99a0927e376b39d23b87adf3ce76f3f6a686
