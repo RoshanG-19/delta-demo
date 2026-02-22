@@ -78,7 +78,12 @@ app.use((req,res,next)=>{
 
 app.use('/listings',listingRoutes);
 app.use('/listings/:id/reviews',reviewRoutes);
+app.get("/", (req, res) => {
+  res.redirect('/listings')
+});
 app.use('/',userRoutes);
+
+
 
 // request other than above routes
 app.use((req,res,next)=>{
